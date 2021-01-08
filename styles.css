@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --dark-blue: hsl(209, 33%, 12%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+input:focus {
+    outline: none;
+}
+
+header {
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro h2 {
+    padding: 40px 0px 15px 0px;
+    color: var(--gray);
+    font-weight: 300;
+    font-size: 40px;
+}
+
+.intro span {
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+
+.intro p {
+    color: var(--dark-blue);
+    font-size: 20px;
+}
+
+.input-box {
+    width: 100%;
+    padding: 0px 30px;
+    margin: 30px 0px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.input-box input[type="text"] {
+    border: solid 1px var(--pale-blue);
+    width: 60%;
+    padding: 15px 20px;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-family: inherit;
+}
+
+.input-box input[type="text"]::placeholder {
+    color: var(--pale-blue);
+}
+
+.input-box input[type="text"].active {
+    border: solid 1px var(--light-red);
+}
+
+.input-box input[type="submit"] {
+    width: 30%;
+    padding: 15px 20px;
+    border: none;
+    background-color: var(--blue);
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.input-box input[type="submit"]:active {
+    transform: scale(.98);
+}
+
+.validator {
+    position: absolute;
+    bottom: -50%;
+    left: 10%;
+    color: var(--light-red);
+    font-style: italic;
+    font-size: 14px;
+    opacity: 0;
+}
+
+.validator.active {
+    opacity: 1;
+}
+
+.screen {
+    width: 100%;
+    margin-top: 70px;
+}
+
+.screen img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.foot {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0px;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons i {
+    margin: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border: solid 1px var(--blue);
+    border-radius: 50%;
+    color: var(--blue);
+    background-color: #fff;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.icons i:hover {
+    color: #fff;
+    background-color: var(--blue);
+}
+
+.copy {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--gray);
+}
+
+@media(max-width: 750px) {
+    .intro h2 {
+        font-size: 25px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    .input-box {
+        flex-direction: column;
+    }
+
+    .input-box input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .input-box input[type="submit"] {
+        width: 100%;
+    }
+
+    .screen {
+        padding: 0px 20px;
+    }
+
+    .validator {
+        bottom: -25%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .foot {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
