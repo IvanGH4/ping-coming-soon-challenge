@@ -166,6 +166,9 @@ header {
     color: var(--gray);
 }
 
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
 @media(max-width: 750px) {
     .intro h2 {
         font-size: 25px;
